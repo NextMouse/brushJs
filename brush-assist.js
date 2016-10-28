@@ -2,7 +2,7 @@
  * brush-assist.js
  *      brush.js辅助js。
  * Created by litaiqing on 2016-10-27.
- * email : litaiqing@twsm.com.cn (欢迎指正与批评不足。)
+ * email : ltqaaa@qq.com (欢迎指正与批评不足。)
  */
 $().ready(function(){
     window.brush_templ = {};
