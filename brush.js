@@ -5,7 +5,7 @@
  *      简单（也可以说粗暴）的实现了模版刷子。
  *      适用多种复杂场合
  * Created by litaiqing on 2016-10-27.
- * email : litaiqing@twsm.com.cn (欢迎指正与批评不足。)
+ * email : ltqaaa@qq.com (欢迎指正与批评不足。)
  */
 +function($){
     var brush = {
