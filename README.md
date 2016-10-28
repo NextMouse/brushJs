@@ -1,8 +1,10 @@
 ### brushJs 
 **一把简单的模版输出刷子** 
 brushJs 代码非常简单,未压缩前不足70行代码，使用起来也非常简单。
+
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/1028/103039_3e267767_134294.png "在这里输入图片标题")
-一共只有两个方法：
+
+**一共只有两个方法：**
     1. $.brushJs.paste(source, list);
        接收一个模版source和一个数组对象list
     2. $.brushJs.paste_data(source, obj, length);
@@ -29,8 +31,7 @@ var result = $.brush.format(source, data);
 ```
 document.getElementsByTagName('body')[0].innerHTML = result;
 ```
-如图：
-![输入图片说明](http://git.oschina.net/uploads/images/2016/1028/101636_999c1f67_134294.png "输出模版实例")
+输出： 1 + 2 = 3
 
 ### 注意点：
 1. 传入什么样的数据格式，就用什么样的数据格式去取数据，否则取不到。
