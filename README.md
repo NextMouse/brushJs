@@ -12,22 +12,27 @@ brushJs 代码非常简单,未压缩前不足70行代码，使用起来也非常
 
 ### 使用实例
 1. 首先在页面的最底端引入brush.js
+
 ```
 <script src="../brush.js" type="text/javascript"></script>
 ```
 2. 然后，你需要准备一个自定义模版，像这样
+
 ```
 var source = "{{data.a}} + {{data.b}} = {{data.a+data.b}}";
 ```
 3. 然后，你还要加点料，准备好数据，像这样
+
 ```
 var data = { a : 1, b : 2 };
 ```
 4. 最后，组合在一起, 获得结果
+
 ```
 var result = $.brush.format(source, data);
 ```
 5. 展示到页面吧
+
 ```
 document.getElementsByTagName('body')[0].innerHTML = result;
 ```
@@ -36,3 +41,15 @@ document.getElementsByTagName('body')[0].innerHTML = result;
 ### 注意点：
 1. 传入什么样的数据格式，就用什么样的数据格式去取数据，否则取不到。
 2. 如果一个非数组对象里面包含数组，并且要循环这个数组，一定要用paste_data去指定数组的长度，也就是要循环的次数。
+3. 取数据时，数据要以data为开端，data就表示当前对象。
+   例如：
+
+    ```
+    var list = [{a:1,b:2},{a:2,b:3}]; 
+    ```
+    
+    如果想取到第i条的b，则在模版代码中需要这样写
+
+    ```
+    data[i].b
+    ```
