@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表格实例</title>
+    <style type="text/css">
+        table, tr, th, td{
+            border: #323232 1px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:10%;">代码</th>
+                <th style="width:12%;">楼房名称</th>
+                <th style="width:12%;">所在街道</th>
+                <th style="width:15%;">物业公司地址</th>
+                <th style="width:11%;">联系人</th>
+                <th style="width:15%;">时间</th>
+                <th style="width:8%;">状态</th>
+                <th style="width:16%;">操作</th>
+            </tr>
+        </thead>
+        <tbody b-view="table_templ">
+            <tr>
+                <td>{{ data.pageModel.dataList[i].code }}</td>
+                <td>{{ data.pageModel.dataList[i].houseName }}</td>
+                <td>{{ data.pageModel.dataList[i].street }}</td>
+                <td>{{ data.pageModel.dataList[i].address }}</td>
+                <td>{{ data.pageModel.dataList[i].linkman }}</td>
+                <td>{{ data.pageModel.dataList[i].createTime }}</td>
+                <td>{{ {1:"正常",0:"已拆迁"}[data.pageModel.dataList[i].status] }}</td>
+                <td>
+                    <input type="button" value="编辑">
+                    <input type="button" value="删除">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="../jQuery/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="../brush.js" type="text/javascript"></script>
+    <script src="../brush-assist.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $.get('pageModel.json', function(data){
+                var source = $.depot.get('table_templ');
+                $('[b-view="table_templ"]').html($.brush.paste_data(source, data, data.pageModel.dataList.length));
+            });
+        });
+    </script>
+</body>
+</html>

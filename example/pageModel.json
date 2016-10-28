@@ -1,0 +1,38 @@
+{
+    "MSG" : "1",
+    "pageModel" : {
+        "pageIndex" : 2,
+        "pageSize" : 3,
+        "totalNum" : 15,
+        "totalPage" : 5,
+        "dataList" : [
+                {
+                    "code" : 1,
+                    "houseName" : "1号楼",
+                    "street" : "府右街西巷",
+                    "address" : "北京市西城区育教胡同4号",
+                    "linkman" : "李主任",
+                    "createTime" : "2016-10-28 15:40:31",
+                    "status" : 1
+                },
+                {
+                    "code" : 2,
+                    "houseName" : "2号楼",
+                    "street" : "羊皮市胡同",
+                    "address" : "北京市西城区育教胡同01号",
+                    "linkman" : "张主任",
+                    "createTime" : "2016-08-08 12:08:20",
+                    "status" : 1
+                },
+                {
+                    "code" : 2,
+                    "houseName" : "2号楼",
+                    "street" : "府右街西巷",
+                    "address" : "北京市西城区育教胡同3号",
+                    "linkman" : "李主任",
+                    "createTime" : "2016-06-04 11:15:42",
+                    "status" : 0
+                }
+        ]
+    }
+}
